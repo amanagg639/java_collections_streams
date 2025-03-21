@@ -1,4 +1,4 @@
-package collections.reverse_list;
+package collections.list_interface.reverse_list;
 
 import java.util.LinkedList;
 import java.util.Scanner;

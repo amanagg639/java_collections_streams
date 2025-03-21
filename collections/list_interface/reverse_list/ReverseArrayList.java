@@ -1,29 +1,24 @@
-package collections;
+package collections.list_interface.reverse_list;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
-public class RotateElements {
+public class ReverseArrayList {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the length of arrayList: ");
         int len = scanner.nextInt();
         ArrayList<Integer> list = new ArrayList<>();
-        for (int i = 0; i < len; i++) {
+        for(int i=0; i<len; i++){
             list.add(scanner.nextInt());
         }
-        int k = scanner.nextInt();
-        rotate(list, k);
+        reverseList(list);
         System.out.println(list);
     }
 
-    private static void rotate(ArrayList<Integer> list, int k) {
-        reverseList(list, 0, k-1);
-        reverseList(list, k, list.size()-1);
-        reverseList(list, 0, list.size()-1);
-    }
-
-    private static void reverseList(ArrayList<Integer> list, int i, int j) {
+    private static void reverseList(ArrayList<Integer> list) {
+        int i=0;
+        int j= list.size()-1;
         while(i<j){
             int temp = list.get(i);
             list.set(i, list.get(j));
@@ -32,5 +27,4 @@ public class RotateElements {
             j--;
         }
     }
-
 }
