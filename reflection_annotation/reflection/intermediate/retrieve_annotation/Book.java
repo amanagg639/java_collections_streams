@@ -10,7 +10,7 @@ public class Book {
         this.bookName = bookName;
     }
 
-    public String getBookName() {
+    public String getBookName(String name) {
         return bookName;
     }
 }
